@@ -43,14 +43,14 @@ const AddEditBlog = ({ user, setActive }) => {
         (snapshot) => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log("Upload is " + progress + "% done");
+          console.log("Загрузка на" + progress + "% завершена");
           setProgress(progress);
           switch (snapshot.state) {
             case "paused":
-              console.log("Upload is paused");
+              console.log("Загрузка приостановлена");
               break;
             case "running":
-              console.log("Upload is running");
+              console.log("Загрузка в процессе");
               break;
             default:
               break;
